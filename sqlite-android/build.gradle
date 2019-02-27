@@ -7,7 +7,7 @@ apply plugin: 'maven-publish'
 apply plugin: 'com.jfrog.bintray'
 apply plugin: 'de.undercouch.download'
 
-group = 'io.requery'
+group = 'com.nextfaze.requery'
 version = '3.27.1'
 description = 'Android SQLite compatibility library'
 
@@ -61,11 +61,11 @@ ext {
         resolveStrategy = DELEGATE_FIRST
         name project.name
         description project.description
-        url 'https://github.com/requery/sqlite-android'
+        url 'https://github.com/NextFaze/sqlite-android-rtree'
         scm {
-            url 'https://github.com/requery/sqlite-android.git'
-            connection 'scm:git:git://github.com/requery/sqlite-android.git'
-            developerConnection 'scm:git:git@github.com/requery/sqlite-android.git'
+            url 'https://github.com/NextFaze/sqlite-android-rtree.git'
+            connection 'scm:git:git://github.com/NextFaze/sqlite-android-rtree.git'
+            developerConnection 'scm:git:git@github.com/NextFaze/sqlite-android-rtree.git'
         }
         licenses {
             license {
@@ -76,8 +76,8 @@ ext {
         }
         developers {
             developer {
-                id 'npurushe'
-                name 'Nikhil Purushe'
+                id 'btilbrook'
+                name 'Ben Tilbrook'
             }
         }
     }
@@ -119,11 +119,11 @@ bintray {
     key = properties.getProperty('bintray.apikey')
     publications = ['maven']
     pkg {
-        repo = 'requery'
-        name = 'sqlite-android'
-        userOrg = 'requery'
+        repo = 'sqlite-android-rtree'
+        name = 'sqlite-android-rtree'
+        userOrg = 'nextfaze'
         licenses = ['Apache-2.0']
-        vcsUrl = 'https://github.com/requery/sqlite-android.git'
+        vcsUrl = 'https://github.com/NextFaze/sqlite-android-rtree.git'
         version {
             name = project.version
             desc = project.description
